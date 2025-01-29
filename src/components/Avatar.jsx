@@ -39,7 +39,8 @@ export function Avatar(props) {
     morphTargetSmoothing: 0.5,
     script: {
       value: "welcome",
-      options: ["welcome", "pizzas"],
+      // options: ["welcome", "pizzas"],
+      options: ["welcome", "pizzas_j","sample_audio"],
     },
   });
 
@@ -118,7 +119,7 @@ export function Avatar(props) {
   
 
   useEffect(() => {
-    console.log(nodes.Wolf3D_Head.morphTargetDictionary)
+    // console.log(nodes.Wolf3D_Head.morphTargetDictionary)
     nodes.Wolf3D_Head.morphTargetInfluences[
       nodes.Wolf3D_Head.morphTargetDictionary["viseme_I"]
     ] = 1;
@@ -147,8 +148,8 @@ export function Avatar(props) {
   const { animations: greetingAnimation } = useFBX(
     "/animations/Standing Greeting.fbx"
   );
-  console.log(nodes);
-  console.log(materials);
+  // console.log(nodes);
+  // console.log(materials);
 
   idleAnimation[0].name = "Idle";
   angryAnimation[0].name = "Angry";
